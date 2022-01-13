@@ -51,7 +51,7 @@ export function Messenger() {
     const getConversations = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/conversations/" + user._id
+          "https://node-rtsocial.herokuapp.com/api/conversations/" + user._id
         );
         setConversations(res.data);
       } catch (error) {
@@ -65,7 +65,7 @@ export function Messenger() {
     const getMessages = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/messages/" + currentChat._id
+          "https://node-rtsocial.herokuapp.com/api/messages/" + currentChat._id
         );
         setMessages(res.data);
       } catch (error) {
@@ -95,7 +95,7 @@ export function Messenger() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/messages",
+        "https://node-rtsocial.herokuapp.com/api/messages",
         message
       );
       setMessages([...messages, res.data]);

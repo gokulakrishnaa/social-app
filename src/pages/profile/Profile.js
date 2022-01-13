@@ -15,7 +15,7 @@ export function Profile() {
   useEffect(() => {
     const fetchUser = async () => {
       const res = await axios.get(
-        `http://localhost:5000/api/users?username=${username}`
+        `https://node-rtsocial.herokuapp.com/api/users?username=${username}`
       );
       setUser(res.data);
     };

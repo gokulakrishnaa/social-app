@@ -11,7 +11,7 @@ export function Conversation({ conversation, currentUser }) {
     const getUser = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/users?userId=" + friendId
+          "https://node-rtsocial.herokuapp.com/api/users?userId=" + friendId
         );
         setUser(res.data);
       } catch (error) {

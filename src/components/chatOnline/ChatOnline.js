@@ -10,7 +10,7 @@ export function ChatOnline({ onlineUsers, currentId, setCurrentChat }) {
   useEffect(() => {
     const getFriends = async () => {
       const res = await axios.get(
-        "http://localhost:5000/api/users/friends/" + currentId
+        "https://node-rtsocial.herokuapp.com/api/users/friends/" + currentId
       );
       setFriends(res.data);
     };
@@ -24,7 +24,7 @@ export function ChatOnline({ onlineUsers, currentId, setCurrentChat }) {
   const handleClick = async (user) => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/conversations/${currentId}/${user._id}`
+        `https://node-rtsocial.herokuapp.com/api/conversations/${currentId}/${user._id}`
       );
       setCurrentChat(res.data);
     } catch (error) {

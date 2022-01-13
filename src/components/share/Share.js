@@ -20,7 +20,10 @@ export function Share() {
       desc: desc.current.value,
     };
     try {
-      await axios.post("http://localhost:5000/api/posts", newPost);
+      await axios.post(
+        "https://node-rtsocial.herokuapp.com/api/posts",
+        newPost
+      );
     } catch (error) {
       console.log(error);
     }

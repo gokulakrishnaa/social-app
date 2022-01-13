@@ -22,7 +22,7 @@ export function Rightbar({ user }) {
     const getFriends = async () => {
       try {
         const friendList = await axios.get(
-          "http://localhost:5000/api/users/friends/" + user._id
+          "https://node-rtsocial.herokuapp.com/api/users/friends/" + user._id
         );
         setFriends(friendList.data);
       } catch (error) {
@@ -36,13 +36,17 @@ export function Rightbar({ user }) {
     try {
       if (followed) {
         await axios.put(
-          "http://localhost:5000/api/users/" + user._id + "/unfollow",
+          "https://node-rtsocial.herokuapp.com/api/users/" +
+            user._id +
+            "/unfollow",
           { userId: currentUser._id }
         );
         dispatch({ type: "UNFOLLOW", payload: user._id });
       } else {
         await axios.put(
-          "http://localhost:5000/api/users/" + user._id + "/follow",
+          "https://node-rtsocial.herokuapp.com/api/users/" +
+            user._id +
+            "/follow",
           { userId: currentUser._id }
         );
         dispatch({ type: "FOLLOW", payload: user._id });

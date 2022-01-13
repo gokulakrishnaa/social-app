@@ -12,9 +12,11 @@ export function Feed({ username }) {
   useEffect(() => {
     const fetchPosts = async () => {
       const res = username
-        ? await axios.get("http://localhost:5000/api/posts/profile/" + username)
+        ? await axios.get(
+            "https://node-rtsocial.herokuapp.com/api/posts/profile/" + username
+          )
         : await axios.get(
-            "http://localhost:5000/api/posts/timeline/" + user._id
+            "https://node-rtsocial.herokuapp.com/api/posts/timeline/" + user._id
           );
       setPosts(
         res.data.sort((p1, p2) => {

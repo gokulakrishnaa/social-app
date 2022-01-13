@@ -21,7 +21,7 @@ export function Post({ post }) {
   useEffect(() => {
     const fetchUser = async () => {
       const res = await axios.get(
-        `http://localhost:5000/api/users?userId=${post.userId}`
+        `https://node-rtsocial.herokuapp.com/api/users?userId=${post.userId}`
       );
       setUser(res.data);
     };
@@ -30,9 +30,12 @@ export function Post({ post }) {
 
   const likeHandler = () => {
     try {
-      axios.put("http://localhost:5000/api/posts/" + post._id + "/like", {
-        userId: currentUser._id,
-      });
+      axios.put(
+        "https://node-rtsocial.herokuapp.com/api/posts/" + post._id + "/like",
+        {
+          userId: currentUser._id,
+        }
+      );
     } catch (error) {}
     setLike(isLiked ? like - 1 : like + 1);
     setIsLiked(!isLiked);
