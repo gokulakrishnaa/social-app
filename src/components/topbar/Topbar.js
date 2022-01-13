@@ -40,9 +40,11 @@ export function Topbar() {
             </Badge>
           </div>
           <div className="topbarIconItem">
-            <Badge badgeContent={4} color="secondary">
-              <ChatIcon />
-            </Badge>
+            <Link to="/messenger" style={{ textDecoration: "none" }}>
+              <Badge badgeContent={4} color="secondary">
+                <ChatIcon />
+              </Badge>
+            </Link>
           </div>
           <div className="topbarIconItem">
             <Badge badgeContent={4} color="secondary">
