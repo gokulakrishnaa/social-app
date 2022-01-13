@@ -20,7 +20,7 @@ export function Messenger() {
   const socket = useRef();
 
   useEffect(() => {
-    socket.current = io("ws://localhost:8080");
+    socket.current = io("https://nsocial-socketio.herokuapp.com");
     socket.current.on("getMessage", (data) => {
       setArrivalMessage({
         sender: data.senderId,
