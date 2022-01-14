@@ -10,20 +10,25 @@ import ChatIcon from "@mui/icons-material/Chat";
 import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
 import { Users } from "../../appData.js";
 import { Closefriend } from "../closefriend/Closefriend";
+import { Link } from "react-router-dom";
 
 export function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
         <ul className="sidebarList">
-          <li className="sidebarListItem">
-            <RssFeedIcon className="sidebarIcon" />
-            <span className="sidebarListItemText">Feed</span>
-          </li>
-          <li className="sidebarListItem">
-            <ChatIcon className="sidebarIcon" />
-            <span className="sidebarListItemText">Chat</span>
-          </li>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <li className="sidebarListItem">
+              <RssFeedIcon className="sidebarIcon" />
+              <span className="sidebarListItemText">Feed</span>
+            </li>
+          </Link>
+          <Link to="/messenger" style={{ textDecoration: "none" }}>
+            <li className="sidebarListItem">
+              <ChatIcon className="sidebarIcon" />
+              <span className="sidebarListItemText">Chat</span>
+            </li>
+          </Link>
           <li className="sidebarListItem">
             <VideoLibraryIcon className="sidebarIcon" />
             <span className="sidebarListItemText">Videos</span>

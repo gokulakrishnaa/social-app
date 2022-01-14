@@ -1,27 +1,32 @@
 export const Users = [
   {
     id: 1,
-    profilePicture: "person/img1.jpg",
+    profilePicture:
+      "https://thumbs.dreamstime.com/b/businessman-profile-icon-male-portrait-flat-design-vector-illustration-47075259.jpg",
     username: "gokul gk",
   },
   {
     id: 2,
-    profilePicture: "person/img2.jpg",
-    username: "steve jobs",
+    profilePicture:
+      "https://thumbs.dreamstime.com/b/businessman-icon-vector-male-avatar-profile-image-profile-businessman-icon-vector-male-avatar-profile-image-182095609.jpg",
+    username: "steve",
   },
   {
     id: 3,
-    profilePicture: "person/img3.jpg",
-    username: "elon musk",
+    profilePicture:
+      "https://cdn5.vectorstock.com/i/1000x1000/00/74/young-man-profile-vector-14770074.jpg",
+    username: "john",
   },
   {
     id: 4,
-    profilePicture: "person/img4.jpg",
-    username: "jeff bezos",
+    profilePicture:
+      "https://cdn5.vectorstock.com/i/1000x1000/20/74/woman-avatar-profile-vector-21372074.jpg",
+    username: "michelle",
   },
   {
     id: 5,
-    profilePicture: "person/img5.jpg",
+    profilePicture:
+      "https://cdn2.vectorstock.com/i/1000x1000/20/76/man-avatar-profile-vector-21372076.jpg",
     username: "mark",
   },
 ];

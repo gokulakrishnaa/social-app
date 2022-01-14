@@ -35,7 +35,7 @@ export function Topbar() {
         </div>
         <div className="topbarIcons">
           <div className="topbarIconItem">
-            <Badge badgeContent={4} color="secondary">
+            <Badge badgeContent={2} color="secondary">
               <PersonIcon />
             </Badge>
           </div>
@@ -47,7 +47,7 @@ export function Topbar() {
             </Link>
           </div>
           <div className="topbarIconItem">
-            <Badge badgeContent={4} color="secondary">
+            <Badge badgeContent={5} color="secondary">
               <NotificationsIcon />
             </Badge>
           </div>
