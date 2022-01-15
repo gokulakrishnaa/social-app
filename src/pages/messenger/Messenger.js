@@ -18,9 +18,10 @@ export function Messenger() {
   const { user } = useContext(AuthContext);
   const scrollRef = useRef();
   const socket = useRef();
+  const endpoint = "https://nsocial-socketio.herokuapp.com/";
 
   useEffect(() => {
-    socket.current = io("https://nsocial-socketio.herokuapp.com");
+    socket.current = io(endpoint);
     socket.current.on("getMessage", (data) => {
       setArrivalMessage({
         sender: data.senderId,
