@@ -72,13 +72,13 @@ export function Post({ post }) {
           <div className="postBottomLeft">
             <img
               className="likeIcon"
-              src={`${PF}like.png`}
+              src="https://www.starpng.com/public/uploads/preview/facebook-like-button-png-image-11574818875msv5cxnljx.png"
               onClick={likeHandler}
               alt=""
             />
             <img
               className="likeIcon"
-              src={`${PF}heart.png`}
+              src="https://www.freeiconspng.com/thumbs/facebook-love-png/facebook-love-png-3.png"
               onClick={likeHandler}
               alt=""
             />
